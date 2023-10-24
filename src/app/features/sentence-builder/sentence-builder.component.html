@@ -1,0 +1,14 @@
+<!-- Next Steps -->
+<h2>Pick a word!</h2>
+<p>Use the drop-down menus below</p>
+
+<input type="hidden" #selection>
+<sentence-viewer [currentSentence]="currentSentence"></sentence-viewer>
+<word-builder *ngIf="dataLoaded" [wordTypes]="wordTypes" [words]="wordsData"
+              (addedWordEvent)="addWord($event)"
+              (removeWordEvent)="removeWord()"
+              (removeAllWordsEvent)="removeAllWords()"
+              (postSentence)="postSentence()">
+
+</word-builder>
+
