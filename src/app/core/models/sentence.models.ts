@@ -8,9 +8,10 @@ export interface GetWordsResponse {
 }
 
 export interface GetSentencesResponse {
-  sentences: string[]
+  sentences: string[];
 }
 
 export interface PostSentenceResponse {
+  saveSuccessful: boolean;
 }
 
