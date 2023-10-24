@@ -19,6 +19,7 @@ export class SentenceBuilderComponent implements OnInit {
 
   ngOnInit(): void {
     this.getWords();
+    this.getAllSentences();
   }
 
   addWord($event: string) {
@@ -53,6 +54,7 @@ export class SentenceBuilderComponent implements OnInit {
 
     this.wordService.postSentence(this.currentSentence.join(' '))
       .subscribe(response => {
+        this.currentSentence = [];
         return response.saveSuccessful;
       })
     return false;

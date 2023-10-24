@@ -1,0 +1,12 @@
+.sentence-viewer-container {
+  width: 800px;
+  padding: 10px;
+  background-color: white;
+  border: thin solid blue;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 2em;
+  height: 2em;
+  margin-bottom: 5px;
+}

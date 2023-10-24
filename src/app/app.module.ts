@@ -7,13 +7,17 @@ import {SentenceBuilderComponent} from './features/sentence-builder/sentence-bui
 import {SentenceViewerComponent} from './features/sentence-builder/sentence-viewer/sentence-viewer.component';
 import {FormsModule} from "@angular/forms";
 import {WordBuilderComponent} from "./features/sentence-builder/word-builder/word-builder.component";
+import {
+  SentenceHistoryViewerComponent
+} from './features/sentence-builder/sentence-history-viewer/sentence-history-viewer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SentenceBuilderComponent,
     SentenceViewerComponent,
-    WordBuilderComponent
+    WordBuilderComponent,
+    SentenceHistoryViewerComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@ export class WordService {
   }
 
   getWords(): Observable<GetWordsResponse> {
-    return this.http.get<GetWordsResponse>(`${this.apiUrl}/word/types`);
+    return this.http.get<GetWordsResponse>(`${this.apiUrl}/word`);
   }
 
   getSentences(): Observable<GetSentencesResponse> {

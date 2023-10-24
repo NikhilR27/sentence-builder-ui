@@ -3,12 +3,19 @@
 <p>Use the drop-down menus below</p>
 
 <input type="hidden" #selection>
-<sentence-viewer [currentSentence]="currentSentence"></sentence-viewer>
-<word-builder *ngIf="dataLoaded" [wordTypes]="wordTypes" [words]="wordsData"
-              (addedWordEvent)="addWord($event)"
-              (removeWordEvent)="removeWord()"
-              (removeAllWordsEvent)="removeAllWords()"
-              (postSentence)="postSentence()">
 
-</word-builder>
+<ng-container class="block">
+  <sentence-viewer [currentSentence]="currentSentence"></sentence-viewer>
+  <word-builder *ngIf="dataLoaded" [wordTypes]="wordTypes" [words]="wordsData"
+                (addedWordEvent)="addWord($event)"
+                (removeWordEvent)="removeWord()"
+                (removeAllWordsEvent)="removeAllWords()"
+                (postSentence)="postSentence()">
+  </word-builder>
+</ng-container>
+
+<ng-container class="block">
+  <sentence-history-viewer [sentences]="allSentences"></sentence-history-viewer>
+</ng-container>
+
 
