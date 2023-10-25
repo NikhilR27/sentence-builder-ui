@@ -55,7 +55,11 @@ export class SentenceBuilderComponent implements OnInit {
     this.wordService.postSentence(this.currentSentence.join(' '))
       .subscribe(response => {
         this.currentSentence = [];
-        return response.saveSuccessful;
+        const success = response.saveSuccessful;
+        if (success) {
+          this.getAllSentences();
+        }
+        return success;
       })
     return false;
   }
