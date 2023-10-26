@@ -25,6 +25,7 @@ select {
   line-height: 1.5em;
   padding: 0.5em 3.5em 0.5em 1em;
   margin: 10px 10px 10px 0;
+  width: 7.5em;
   /* reset */
 
   -webkit-box-sizing: border-box;
